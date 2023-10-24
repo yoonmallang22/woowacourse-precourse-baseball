@@ -39,4 +39,19 @@ class Player {
   }
 }
 
+class Manager {
+  #strikeNum = 0;
+  #ballNum = 0;
+
+  compareNums(computerAnswer, playerAnswer) {
+    [...playerAnswer.toString()].forEach((v, i) => {
+      if (v == computerAnswer[i]) {
+        this.#strikeNum++;
+      } else if (computerAnswer.includes(v)) {
+        this.#ballNum++;
+      }
+    });
+  }
+}
+
 export default App;
