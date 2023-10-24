@@ -52,6 +52,17 @@ class Manager {
       }
     });
   }
+
+  printResult() {
+    if (this.#strikeNum === 0 && this.#ballNum === 0) {
+      return "낫싱";
+    } else if (this.#strikeNum === 3) {
+      return `3스트라이크
+3개의 숫자를 모두 맞히셨습니다! 게임 종료`;
+    } else {
+      return `${this.#ballNum ? this.#ballNum + "볼" : ""} ${this.#strikeNum ? this.#strikeNum + "스트라이크" : ""}`.trim();
+    }
+  }
 }
 
 export default App;
