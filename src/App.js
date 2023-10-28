@@ -81,6 +81,14 @@ class Manager {
       return false;
     }
   }
+
+  checkPlayerThreeNumsWrong(playerNum) {
+    return playerNum.length !== 3 || !/^[0-9]{3}$/.test(playerNum);
+  }
+
+  checkPlayerRestartNum(restartNum) {
+    return restartNum === "1" || restartNum === "2";
+  }
 }
 
 export default App;
