@@ -90,14 +90,20 @@ class Manager {
   #strikeNum = 0;
   #ballNum = 0;
 
-  compareNums(computerAnswer, playerAnswer) {
-    [...playerAnswer.toString()].forEach((v, i) => {
-      if (v == computerAnswer[i]) {
-        this.#strikeNum++;
-      } else if (computerAnswer.includes(v)) {
-        this.#ballNum++;
+  compareNums(playerAnswer, computerAnswer) {
+    let strike = 0;
+    let ball = 0;
+
+    [...playerAnswer].forEach((v, i) => {
+      if (Number(v) === computerAnswer[i]) {
+        strike++;
+      } else if (computerAnswer.includes(Number(v))) {
+        ball++;
       }
     });
+
+    this.#strikeNum = strike;
+    this.#ballNum = ball;
   }
 
   printResult() {
