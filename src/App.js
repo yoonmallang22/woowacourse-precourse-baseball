@@ -112,11 +112,7 @@ class Manager {
   }
 
   checkPlayerWantsRestart(restartNum) {
-    if (restartNum === 1) {
-      return true;
-    } else {
-      return false;
-    }
+    return restartNum === "1" ? true : false;
   }
 
   checkPlayerThreeNumsWrong(playerNum) {
