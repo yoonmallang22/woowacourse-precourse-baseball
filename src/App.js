@@ -67,7 +67,6 @@ class Computer {
 
 class Player {
   #numbers;
-  #restartNum;
 
   guessThreeNums(playerNumbers) {
     this.#numbers = playerNumbers;
@@ -75,14 +74,6 @@ class Player {
 
   getThreeNums() {
     return this.#numbers;
-  }
-
-  wantRestart(restartNum) {
-    this.#restartNum = restartNum;
-  }
-
-  getRestartNum() {
-    return this.#restartNum;
   }
 }
 
